@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Lab One Report</title>
+        <style>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        
+        
+    </head>
+    <body class="vscode-light">
+        <h1 id="lab-one-report">Lab One Report</h1>
+<p>Angel Camacho 10/4/2020</p>
+<p>Username: acamacho</p>
+<p>CS 474</p>
+<hr>
+<p>My out put from three runs:</p>
+<pre><code><code><div>---------------------------------
+
+Executed: process1 
+Result: 100000
+Finished Child PID: 7649
+Executed: process2 
+Result: 200000
+Finished Child PID: 7650
+Executed: process3 
+Result: 300000
+Finished Child PID: 7651
+Executed: process4
+Result: 500000
+Finished Child PID: 7652
+
+---------------------------------
+
+Executed: process1 
+Result: 100016
+Finished Child PID: 7654
+Executed: process2 
+Result: 200000
+Finished Child PID: 7655
+Executed: process3 
+Result: 300000
+Finished Child PID: 7656
+Executed: process4
+Result: 500000
+Finished Child PID: 7657
+
+---------------------------------
+
+Executed: process1 
+Result: 100000
+Finished Child PID: 7659
+Executed: process2 
+Result: 200007
+Finished Child PID: 7660
+Executed: process3 
+Result: 300000
+Finished Child PID: 7661
+Executed: process4
+Result: 500000
+Finished Child PID: 7662
+
+---------------------------------
+</div></code></code></pre>
+<p>It is not specified how long or short the report is supposed to be.</p>
+<p>In this project we were introduced to the concept of shared memmory, and the problems that can occur. We created four processes which share a common variable named &quot;total&quot;. An important key to note here is the fact that withing each process we looped to increase our common variable that I previously mentioned of. After each function is called I then printed the total value.</p>
+<p>Important key details would include making sure that the newly created chilld only. This is done by the following:</p>
+<pre><code class="language-c"><div>    <span class="hljs-keyword">if</span>((pid1 = fork())==<span class="hljs-number">0</span>){
+        process1();
+        <span class="hljs-built_in">exit</span>(<span class="hljs-number">0</span>);
+    }
+</div></code></pre>
+<p>As we can se heare we make sure theat when the fork function is executed the child pid and parent pid should be difrent thus not leting any more children execute it again.</p>
+<p>Another key detail would be the fact that I would get diffrent values each time I runeed my code this is due to the fact that memory is beaing waited on for the next proccess in order to resume. Other than that I put a lot of comments which explain several sections of my code.</p>
+
+    </body>
+    </html>
